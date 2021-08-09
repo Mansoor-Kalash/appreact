@@ -1,18 +1,52 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
+// import {Card,Button  } from "react-bootstrap/";
 class HornedBeast extends React.Component{
+    
+      constructor(props){
+        super(props)
+        this.state = {
+            numberOfLike: 0
+        }
+    }
+
+     increaseNuOfLike = () => {
+        console.log(this);
+
+        this.setState({
+            numberOfLike: this.state.numberOfLike + 1
+        })
+    }
     render(){
+       
         return(
-   <div className = "horn">
+            
+//    <div className = "horn">
     
   
-   <img src= {this.props.imgUrl} alt= " horedBeasts" 
-   />
-   <h2>{this.props.title}</h2>
-    <p>{this.props.desciption}</p>
-   </div>
-    
-  
+//    <img src= {this.props.imgUrl} alt= " horedBeasts" 
+//    />
+//    <h2>{this.props.title}</h2>
+//     <p>{this.props.desciption}</p>
+//    </div>
+    <>
+   <Card style={{ width: '18rem' }}>
+                    <Card.Img  variant="top" src={this.props.imgUrl} />
+                    <Card.Body>
+                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Text>{this.props.desciption}</Card.Text>
+
+                        <Card.Text>
+                         Number of Pets = {this.state.numberOfLike} 👍
+                        </Card.Text>
+                        <Button onClick={this.increaseNuOfLike} variant="primary">voted</Button>
+                    </Card.Body>
+                </Card>
+
+  </>
         )
     }
 }
