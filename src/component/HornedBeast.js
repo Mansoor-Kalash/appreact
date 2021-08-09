@@ -24,14 +24,7 @@ class HornedBeast extends React.Component{
        
         return(
             
-//    <div className = "horn">
-    
-  
-//    <img src= {this.props.imgUrl} alt= " horedBeasts" 
-//    />
-//    <h2>{this.props.title}</h2>
-//     <p>{this.props.desciption}</p>
-//    </div>
+
     <>
    <Card style={{ width: '18rem' }}>
                     <Card.Img  variant="top" src={this.props.imgUrl} />
