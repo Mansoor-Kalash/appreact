@@ -1,45 +1,38 @@
-App .js
-8:01
 import React from 'react';
-import './App.css';
-import Header from './Header';
-import Main from './Main';
-import Footer from './Footer';
-import Data from './Data.json';
-import SelectedBeast from './SelectedBeast';
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: true,
-      ele: {}
-    };
-  }
-  handling = (title) => {
-    let selectedObject = Data.find(element => {
-      if (element.title === title) {
-        this.state = ({
-          ele: element
-        });
-        return element;
-      }
-    });
-    return selectedObject;
-  }
-  handleClose = () => {
-    this.state = ({
-      show: false
-    });
-  }
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
+
+
+class SelectedBeast extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     show: true
+
+  //   };
+
+  // }
+  // handleClose = () => {
+  //   this.setState = ({
+  //     show: false
+  //   });
+  // }
   render() {
     return (
       <>
-        <Header />
-        <Main handling={this.handling} />
-        <SelectedBeast ele = {this.state.ele} handleClose={this.handleClose} show={this.state.show} />
-        <Footer />
+
+        <Modal onClick={this.props.show} onHide={this.props.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body> {this.props.ele} </Modal.Body>
+          <Modal.Footer>
+          </Modal.Footer>
+        </Modal>
       </>
     );
   }
 }
-export default App;
+
+export default SelectedBeast;
