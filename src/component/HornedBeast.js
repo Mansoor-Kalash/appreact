@@ -22,6 +22,7 @@ class HornedBeast extends React.Component{
     }
      Click = () => {
     this.props.handling(this.props.title);
+    
 
   }
     render(){
@@ -30,11 +31,11 @@ class HornedBeast extends React.Component{
             
 
     <>
-   <Card onClick={this.Click}  style={{ width: '18rem' }}>
-                    <Card.Img  variant="top" src={this.props.imgUrl} />
+   <Card onClick={this.Click}   style={{ width: '18rem' , display: 'inline-block' }}>
+                    <Card.Img  variant="top" src={this.props.img} />
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
-                        <Card.Text>{this.props.desciption}</Card.Text>
+                        <Card.Text >{this.props.desciption}</Card.Text>
 
                         <Card.Text>
                          Number of Pets = {this.state.numberOfLike} 👍
