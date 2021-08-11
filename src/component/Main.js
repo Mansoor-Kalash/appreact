@@ -5,13 +5,35 @@ import HornedBeast from "./HornedBeast";
 
 class Main extends React.Component {
   
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+     
+//       hurn: all
+      
+//     };
+//   }
+// handling = (title) => {
+//     let selectedObject = hornData.find(element => {
+//       if (element.title === title) {
+        
+//         return element;
+//       }
+// });
+//     this.setState ({
+//           ele: selectedObject,
+//           show: !this.state.show
+// })
+    
 
+//   }
  
    
   render() {
       
     console.log(this.props);
     return (
+      
       hornData.map((item, index) => {
         return (
           <HornedBeast
