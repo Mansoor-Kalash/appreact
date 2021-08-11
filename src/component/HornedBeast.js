@@ -20,13 +20,17 @@ class HornedBeast extends React.Component{
             numberOfLike: this.state.numberOfLike + 1
         })
     }
+     Click = () => {
+    this.props.handling(this.props.title);
+
+  }
     render(){
        
         return(
             
 
     <>
-   <Card style={{ width: '18rem' }}>
+   <Card onClick={this.Click}  style={{ width: '18rem' }}>
                     <Card.Img  variant="top" src={this.props.imgUrl} />
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>

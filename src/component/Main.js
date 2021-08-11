@@ -1,29 +1,44 @@
 import React from 'react';
 import hornData from "./hornData.json";
 import HornedBeast from "./HornedBeast";
-class Main extends React.Component{
-    render(){
-        return(
-            <> 
-            <h1> First React App</h1>
 
-            {
-                hornData.map((item,idx)=>{
-                    return(
 
-                    
-                    <HornedBeast
-                    // key={item.keyword}
-                    title={item.title}
-                    imgUrl={item.image_url}
-                    desciption={item.description}
-                    />
-                )})
-            }
-            </>   
+class Main extends React.Component {
+    Click = () => {
+    this.props.handling(this.props.title);
 
-        )
-    }
+  }
+
+
+ 
+   
+  render() {
+      
+    console.log(this.props);
+    return (
+      hornData.map((item, index) => {
+        return (
+          <HornedBeast
+            key={index}
+            title={item.title}
+            img={item.image_url}
+            description={item.description}
+            keyword={item.keyword}
+            horns={item.horns}
+            handling = {this.props.handling}
+          />
+        );
+      })
+    );
+  }
 }
 
+
 export default Main;
+
+
+
+
+
+
+
