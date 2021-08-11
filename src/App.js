@@ -10,37 +10,41 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false,
-      ele: []
+      ele: {},
+      show: false
+      
     };
   }
   handling = (title) => {
     let selectedObject = hornData.find(element => {
       if (element.title === title) {
-        this.setState = ({
-          ele: element,
-          show: false
- 
-        });
         
+        return element;
       }
-      return element;
-    });
-    return selectedObject;
+});
+    this.setState ({
+          ele: selectedObject,
+          show: !this.state.show
+})
+    
+
   }
   handleClose = () => {
     
-    this.setState = ({
+    this.setState ({
      
       show: false
     });
   }
+  
   render() {
+    
+    // console.log(this.handling);
     return (
       <>
         <Header />
         <Main handling={this.handling} />
-        <SelectedBeast ele = {this.element} handleClose={this.handleClose} show={this.state.show} />
+        <SelectedBeast ele = {this.state} handleClose={this.handleClose} show={this.state.show} />
         <Footer />
       </>
     );

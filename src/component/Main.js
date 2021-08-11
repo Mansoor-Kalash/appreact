@@ -4,11 +4,7 @@ import HornedBeast from "./HornedBeast";
 
 
 class Main extends React.Component {
-    Click = () => {
-    this.props.handling(this.props.title);
-
-  }
-
+  
 
  
    
@@ -26,6 +22,7 @@ class Main extends React.Component {
             keyword={item.keyword}
             horns={item.horns}
             handling = {this.props.handling}
+            
           />
         );
       })
