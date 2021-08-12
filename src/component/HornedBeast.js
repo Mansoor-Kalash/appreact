@@ -26,16 +26,16 @@ class HornedBeast extends React.Component{
 
   }
     render(){
-       
+    
         return(
-            
+         
 
     <>
    <Card onClick={this.Click}   style={{ width: '18rem' , display: 'inline-block' }}>
-                    <Card.Img  variant="top" src={this.props.img} />
+                    <Card.Img  variant="top" src={this.props.cardPass.cardPass.image_url} />
                     <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
-                        <Card.Text >{this.props.desciption}</Card.Text>
+                        <Card.Title>{this.props.cardPass.cardPass.title}</Card.Title>
+                        <Card.Text >{this.props.cardPass.cardPass.description}</Card.Text>
 
                         <Card.Text>
                          Number of Pets = {this.state.numberOfLike} 👍

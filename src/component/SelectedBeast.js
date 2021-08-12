@@ -20,7 +20,7 @@ class SelectedBeast extends React.Component {
   // }
   
   render() {
-  console.log(this.props.ele);
+
 
     return (
       <>

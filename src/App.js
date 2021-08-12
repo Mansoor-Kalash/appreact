@@ -15,21 +15,24 @@ class App extends React.Component {
       
     };
   }
-  handling = (title) => {
-    let selectedObject = hornData.find(element => {
-      if (element.title === title) {
+  handling = async (title) => {
+    let obj={};
+
+let selectedObject = hornData.find(element => {
+if (element.title === title) {
         
-        return element;
-      }
+  obj=element;
+ }
+//  return selectedObject;
 });
     this.setState ({
-          ele: selectedObject,
+          ele: obj,
           show: !this.state.show
 })
     
 
   }
-  handleClose = () => {
+  handleClose = async () => {
     
     this.setState ({
      
