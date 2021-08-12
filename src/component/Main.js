@@ -16,7 +16,6 @@ class Main extends React.Component {
       cardPass:arr
       
     };
-    console.log(this.state.hurn);
   }
 
 han = (n) => {
@@ -25,7 +24,6 @@ han = (n) => {
   this.setState ({
           hurn: nn,
           })
-  console.log(this.state.hurn);
 
   let arr =[];
 
@@ -60,7 +58,6 @@ else {
 
    
   render(){
-    console.log(this.state.cardPass);
  
     return (
     <>
@@ -70,12 +67,10 @@ else {
           <>
       
           <HornedBeast
-            //  key={index}
-            // title={item.title}
-            // img={item.image_url}
-            // description={item.description}
-            // keyword={item.keyword}
-            // horns={item.horns}
+             key={index}
+            title={item.title}
+            img={item.image_url}
+            description={item.description}
             handling = {this.props.handling}
           cardPass={this.state}
             
