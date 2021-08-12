@@ -31,11 +31,11 @@ class HornedBeast extends React.Component{
          
 
     <>
-   <Card onClick={this.Click}   style={{ width: '18rem' , display: 'inline-block' }}>
-                    <Card.Img  variant="top" src={this.props.cardPass.cardPass.image_url} />
+   <Card    style={{ width: '18rem' , display: 'inline-block' }}>
+                    <Card.Img onClick={this.Click}  variant="top" src={this.props.img} />
                     <Card.Body>
-                        <Card.Title>{this.props.cardPass.cardPass.title}</Card.Title>
-                        <Card.Text >{this.props.cardPass.cardPass.description}</Card.Text>
+                        <Card.Title onClick={this.Click}>{this.props.title}</Card.Title>
+                        <Card.Text >{this.props.description}</Card.Text>
 
                         <Card.Text>
                          Number of Pets = {this.state.numberOfLike} 👍
