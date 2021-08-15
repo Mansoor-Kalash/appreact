@@ -6,6 +6,7 @@ Start time: _____2 pm
 
 Finish time: _____ 5 pm
 
-Actual time needed to complete: _3 hours____
+Actual time needed to complete: 3 hours___
 
-netlify url:  https://determined-torvalds-a0f434.netlify.app/
+netlify url: https://determined-torvalds-a0f434.netlify.app/
+
